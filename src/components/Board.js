@@ -6,9 +6,6 @@ import "./../style.css";
 
 const Board = (props) => {
   const board = useSelector((state) => state.board);
-  const player = useSelector((state) => state.player);
-
-  const dispatch = useDispatch();
 
   return (
     <>

@@ -9,6 +9,18 @@ function App() {
   const [start, setStart] = useState(false);
   const [gridSize, setGridSize] = useState(3);
 
+  const peerConn = () => {
+    const conn = peer.connect("tic-tac-toe-peer-id");
+    console.log("peerID-=-=->");
+    // peer.on("open", function (id) {
+    //   console.log("peerID-=-=->");
+    // });
+    conn.send({
+      strings: "hi!",
+      numbers: 150,
+    });
+  };
+
   const player = useSelector((state) => state.player);
   const counter = useSelector((state) => state.counter);
 
@@ -51,7 +63,7 @@ function App() {
           ? "Tie"
           : "No result"}{" "}
       </h1>
-      {console.log(peer)}
+      <button onClick={() => peerConn()}>Pconnect</button>
     </div>
   );
 }
