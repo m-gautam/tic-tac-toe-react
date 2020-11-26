@@ -39,6 +39,15 @@ const Square = (props) => {
             dispatch(gameResult(board[i][j]));
             return;
           }
+          if (
+            i >= 2 &&
+            props.size - j > 2 &&
+            board[i][j] === board[i - 1][j + 1] &&
+            board[i][j] === board[i - 2][j + 2]
+          ) {
+            dispatch(gameResult(board[i][j]));
+            return;
+          }
         }
       }
     }

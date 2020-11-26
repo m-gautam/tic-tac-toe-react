@@ -1,6 +1,5 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { player1, player2 } from "../actions/playerAction";
+import { useSelector } from "react-redux";
 import Square from "./Square";
 import "./../style.css";
 

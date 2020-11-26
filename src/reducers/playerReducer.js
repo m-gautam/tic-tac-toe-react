@@ -21,7 +21,12 @@ const playerReducer = (state = initialState, action) => {
       }
       return newState;
     case "RESULT":
-      state.result = action.winner;
+      if (action.winner === "X") {
+        state.result = "p1";
+      } else {
+        state.result = "p2";
+      }
+
       return state;
     default:
       return state;
