@@ -1,0 +1,21 @@
+.grid {
+  display: flex;
+  border-width: 4;
+  height: 50;
+  width: 50;
+  border-color: black;
+  padding: 4;
+  margin-bottom: 4;
+}
+
+.square {
+  border: 1px solid lightgray;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.square:hover {
+  background-color: lightgray;
+}
